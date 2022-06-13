@@ -1,13 +1,16 @@
 package services;
-
+import io.ReadAndWrite;
 import model.User;
 
 import java.util.ArrayList;
-import java.util.List;
+
 
 public class ServicesUser {
-    public static List<User> list_User = new ArrayList<>();
-
+    public static ReadAndWrite<User> readAndWriteUser = new ReadAndWrite<>();
+    public static ArrayList<User> list_User = new ArrayList<>();
+    {
+        list_User = readAndWriteUser.read("listAccount.txt");
+    }
     public Boolean checkAccountLogin(User user) {
         for (User x : list_User) {
             if (x.getUserName().equals(user.getUserName()) && x.getPassword().equals(user.getPassword()))
@@ -30,7 +33,8 @@ public class ServicesUser {
         else return false;
     }
 
-    public void addToList(User use) {
+    public void addUser(User use) {
         list_User.add(use);
+        readAndWriteUser.write(list_User, "listAccount.txt");
     }
 }

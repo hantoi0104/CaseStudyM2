@@ -29,7 +29,7 @@ public class ControllerRegister implements ActionListener {
                 if (registerView.checkConfirmPassWord()) {
                     User user = registerView.createUse();
                     if (!servicesUser.checkAccountRegister(user)) {
-                        servicesUser.addToList(user);
+                        servicesUser.addUser(user);
                         registerView.setAlerRegister("Đăng ký thành công");
                         registerView.clearInputRegister();
                     } else {

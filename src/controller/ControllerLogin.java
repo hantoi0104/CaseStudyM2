@@ -1,14 +1,15 @@
 package controller;
 
 import services.ServicesUser;
+import view.BorrowManagementView;
 import view.LoginView;
-//import view.ManagerStudentView;
 import view.RegisterView;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import static services.ServicesUser.list_User;
+
 
 public class ControllerLogin implements ActionListener {
     private LoginView loginView;
@@ -28,8 +29,8 @@ public class ControllerLogin implements ActionListener {
             System.out.println(this.loginView.getUser().getPassword());
             if (servicesUser.checkAccountLogin(loginView.getUser())) {
                 list_User.add(loginView.getUser());
-//                new ManagerStudentView();
-                loginView.clearInputLogin();
+                new BorrowManagementView();
+                loginView.closeView();
 
             } else {
                 loginView.setAlertLogin("Tài khoản không tồn tại");

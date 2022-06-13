@@ -1,12 +1,9 @@
-//package controller;
-//
-////import view.ManagerStudentView;
-//
-//import view.RegisterView;
-//
-//public class Main {
-//
-//    public static void main(String[] args) {
-//        RegisterView registerView =new RegisterView();
-//    }
-//}
+package controller;
+import view.LoginView;
+
+public class Main {
+
+    public static void main(String[] args) {
+        LoginView loginView =new LoginView();
+    }
+}

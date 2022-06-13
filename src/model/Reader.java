@@ -3,36 +3,26 @@ package model;
 import java.time.LocalDate;
 
 public class Reader extends Person{
-    private String idReader;
-    private String readerType;
+    private int idReader;
     private int phoneNumber;
-    private int email;
+    private String email;
 
     public Reader() {
     }
 
-    public Reader(int cmnd, String name, LocalDate dateOfBirth, String address, String gender, String idReader, String readerType, int phoneNumber, int email) {
+    public Reader(int cmnd, String name, LocalDate dateOfBirth, String address, String gender, int idReader, int phoneNumber, String email) {
         super(cmnd, name, dateOfBirth, address, gender);
         this.idReader = idReader;
-        this.readerType = readerType;
         this.phoneNumber = phoneNumber;
         this.email = email;
     }
 
-    public String getIdReader() {
+    public int getIdReader() {
         return idReader;
     }
 
-    public void setIdReader(String idReader) {
+    public void setIdReader(int idReader) {
         this.idReader = idReader;
-    }
-
-    public String getReaderType() {
-        return readerType;
-    }
-
-    public void setReaderType(String readerType) {
-        this.readerType = readerType;
     }
 
     public int getPhoneNumber() {
@@ -43,11 +33,11 @@ public class Reader extends Person{
         this.phoneNumber = phoneNumber;
     }
 
-    public int getEmail() {
+    public String getEmail() {
         return email;
     }
 
-    public void setEmail(int email) {
+    public void setEmail(String email) {
         this.email = email;
     }
 
@@ -55,7 +45,6 @@ public class Reader extends Person{
     public String toString() {
         return "Reader{" +
                 "idReader='" + idReader + '\'' +
-                ", readerType='" + readerType + '\'' +
                 ", phoneNumber=" + phoneNumber +
                 ", email=" + email +
                 '}';

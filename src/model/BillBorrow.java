@@ -1,31 +1,34 @@
 package model;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class BillBorrow {
+public class BillBorrow implements Serializable {
     private String idBill;
     private LocalDate day_Start;
-    private int timeBorrow;
     private Reader reader;
     private Employee employee;
     private double freeBorrow;
     private int totalBorrow;
-    private BorrowManagement borrowManagement;
+    private BookBorrowManagement listBookBorrowManagement;
+    private int timeBorrow;
+    private Double totalMoney;
 
     public BillBorrow(String idBill) {
         this.idBill = idBill;
     }
 
-    public BillBorrow(String idBill, LocalDate day_Start, int timeBorrow, Reader reader, Employee employee,
-                      double freeBorrow, int totalBorrow, BorrowManagement borrowManagement) {
+    public BillBorrow(String idBill, LocalDate day_Start, Reader reader, Employee employee,
+                      double freeBorrow, int totalBorrow, BookBorrowManagement listBookBorrowManagement) {
         this.idBill = idBill;
         this.day_Start = day_Start;
-        this.timeBorrow = timeBorrow;
         this.reader = reader;
         this.employee = employee;
         this.freeBorrow = freeBorrow;
         this.totalBorrow = totalBorrow;
-        this.borrowManagement = borrowManagement;
+        this.listBookBorrowManagement = listBookBorrowManagement;
+        this.timeBorrow = 0;
+        this.totalBorrow = 0;
     }
 
     public String getIdBill() {
@@ -44,13 +47,6 @@ public class BillBorrow {
         this.day_Start = day_Start;
     }
 
-    public int getTimeBorrow() {
-        return timeBorrow;
-    }
-
-    public void setTimeBorrow(int timeBorrow) {
-        this.timeBorrow = timeBorrow;
-    }
 
     public Reader getReader() {
         return reader;
@@ -84,11 +80,11 @@ public class BillBorrow {
         this.totalBorrow = totalBorrow;
     }
 
-    public BorrowManagement getBorrowManagement() {
-        return borrowManagement;
+    public BookBorrowManagement getBorrowManagement() {
+        return listBookBorrowManagement;
     }
 
-    public void setBorrowManagement(BorrowManagement borrowManagement) {
-        this.borrowManagement = borrowManagement;
+    public void setBorrowManagement(BookBorrowManagement listBookBorrowManagement) {
+        this.listBookBorrowManagement = listBookBorrowManagement;
     }
 }

@@ -15,8 +15,8 @@ public class Book extends Document{
         super(name, author, year, quantity);
         this.id = id;
         this.type = type;
-        this. empty = quantity;
-        this.status = "new";
+        this.empty = quantity;
+        this.status = "New";
     }
 
     public int getId() {

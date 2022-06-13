@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="view.ManagerBookView">
   <grid id="27dc6" binding="mainBookView" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-    <margin top="0" left="0" bottom="0" right="0"/>
+    <margin top="0" left="20" bottom="20" right="10"/>
     <constraints>
-      <xy x="20" y="20" width="500" height="400"/>
+      <xy x="20" y="20" width="572" height="471"/>
     </constraints>
     <properties/>
     <border type="none"/>
     <children>
       <grid id="a1712" layout-manager="GridLayoutManager" row-count="1" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-        <margin top="20" left="20" bottom="20" right="20"/>
+        <margin top="10" left="20" bottom="0" right="20"/>
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -40,16 +40,23 @@
             </constraints>
             <properties>
               <background color="-917441"/>
-              <enabled value="false"/>
+              <doubleBuffered value="true"/>
+              <enabled value="true"/>
+              <focusCycleRoot value="true"/>
+              <focusPainted value="true"/>
+              <focusTraversalPolicyProvider value="true"/>
+              <focusable value="true"/>
               <font size="12"/>
-              <foreground color="-1"/>
+              <foreground color="-65794"/>
+              <hideActionText value="true"/>
+              <horizontalTextPosition value="0"/>
               <text value="Tìm kiếm"/>
             </properties>
           </component>
         </children>
       </grid>
-      <grid id="7ab2d" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-        <margin top="0" left="0" bottom="0" right="0"/>
+      <grid id="7ab2d" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="30" bottom="0" right="30"/>
         <constraints>
           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -58,21 +65,46 @@
         <children>
           <scrollpane id="33e2e">
             <constraints>
-              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <minimum-size width="-1" height="120"/>
+                <preferred-size width="-1" height="120"/>
+                <maximum-size width="-1" height="120"/>
+              </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <focusable value="false"/>
+              <foreground color="-16777216"/>
+            </properties>
             <border type="none"/>
             <children>
-              <component id="2825b" class="javax.swing.JTable" binding="table1" default-binding="true">
+              <component id="2825b" class="javax.swing.JTable" binding="tableDisplayBook">
                 <constraints/>
-                <properties/>
+                <properties>
+                  <background color="-1"/>
+                  <cellSelectionEnabled value="true"/>
+                  <columnSelectionAllowed value="true"/>
+                  <foreground color="-16777216"/>
+                  <gridColor color="-4473925"/>
+                  <inheritsPopupMenu value="true"/>
+                  <selectionForeground color="-4473925"/>
+                  <showHorizontalLines value="true"/>
+                  <showVerticalLines value="true"/>
+                </properties>
               </component>
             </children>
           </scrollpane>
+          <component id="50a5b" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="QUẢN LÝ DANH MỤC SÁCH"/>
+            </properties>
+          </component>
         </children>
       </grid>
-      <grid id="2754e" layout-manager="GridLayoutManager" row-count="6" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-        <margin top="0" left="0" bottom="0" right="0"/>
+      <grid id="2754e" layout-manager="GridLayoutManager" row-count="7" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="20" bottom="10" right="20"/>
         <constraints>
           <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -84,13 +116,17 @@
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <focusable value="false"/>
+              <font size="12" style="1"/>
               <text value="Tên sách"/>
             </properties>
           </component>
           <component id="43651" class="javax.swing.JTextField" binding="inputBookName">
             <constraints>
               <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="-1"/>
+                <minimum-size width="200" height="-1"/>
+                <preferred-size width="200" height="-1"/>
+                <maximum-size width="200" height="-1"/>
               </grid>
             </constraints>
             <properties>
@@ -102,6 +138,8 @@
               <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <focusable value="false"/>
+              <font size="12" style="1"/>
               <text value="ID"/>
             </properties>
           </component>
@@ -110,6 +148,8 @@
               <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <focusable value="false"/>
+              <font size="12" style="1"/>
               <text value="Tác giả"/>
             </properties>
           </component>
@@ -118,6 +158,8 @@
               <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <focusable value="false"/>
+              <font size="12" style="1"/>
               <text value="Năm"/>
             </properties>
           </component>
@@ -126,6 +168,8 @@
               <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <focusable value="false"/>
+              <font size="12" style="1"/>
               <text value="Loại"/>
             </properties>
           </component>
@@ -134,13 +178,17 @@
               <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <focusable value="false"/>
+              <font size="12" style="1"/>
               <text value="Số lượng"/>
             </properties>
           </component>
           <component id="4552d" class="javax.swing.JTextField" binding="inputBookID">
             <constraints>
               <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="-1"/>
+                <minimum-size width="200" height="-1"/>
+                <preferred-size width="200" height="-1"/>
+                <maximum-size width="200" height="-1"/>
               </grid>
             </constraints>
             <properties>
@@ -150,17 +198,21 @@
           <component id="90ce1" class="javax.swing.JTextField" binding="inputBookAuthor">
             <constraints>
               <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="-1"/>
+                <minimum-size width="200" height="-1"/>
+                <preferred-size width="200" height="-1"/>
+                <maximum-size width="200" height="-1"/>
               </grid>
             </constraints>
             <properties>
               <text value=""/>
             </properties>
           </component>
-          <component id="8fd9b" class="javax.swing.JTextField" binding="InputBookYear">
+          <component id="8fd9b" class="javax.swing.JTextField" binding="inputBookYear">
             <constraints>
               <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="-1"/>
+                <minimum-size width="200" height="-1"/>
+                <preferred-size width="200" height="-1"/>
+                <maximum-size width="200" height="-1"/>
               </grid>
             </constraints>
             <properties>
@@ -170,7 +222,9 @@
           <component id="5127d" class="javax.swing.JTextField" binding="inputBookType">
             <constraints>
               <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="-1"/>
+                <minimum-size width="200" height="-1"/>
+                <preferred-size width="200" height="-1"/>
+                <maximum-size width="200" height="-1"/>
               </grid>
             </constraints>
             <properties>
@@ -180,7 +234,9 @@
           <component id="2aba5" class="javax.swing.JTextField" binding="inputBookQuantity">
             <constraints>
               <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="-1"/>
+                <minimum-size width="200" height="-1"/>
+                <preferred-size width="200" height="-1"/>
+                <maximum-size width="200" height="-1"/>
               </grid>
             </constraints>
             <properties>
@@ -192,7 +248,10 @@
             <constraints>
               <grid row="0" column="2" row-span="6" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
             </constraints>
-            <properties/>
+            <properties>
+              <focusCycleRoot value="true"/>
+              <foreground color="-1"/>
+            </properties>
             <border type="none"/>
             <children>
               <component id="9ac3a" class="javax.swing.JButton" binding="addButton">
@@ -201,9 +260,16 @@
                 </constraints>
                 <properties>
                   <background color="-917441"/>
-                  <enabled value="false"/>
+                  <doubleBuffered value="true"/>
+                  <enabled value="true"/>
+                  <focusCycleRoot value="true"/>
+                  <focusPainted value="true"/>
+                  <focusTraversalPolicyProvider value="true"/>
+                  <focusable value="true"/>
                   <font size="12"/>
-                  <foreground color="-1"/>
+                  <foreground color="-65794"/>
+                  <hideActionText value="true"/>
+                  <horizontalTextPosition value="0"/>
                   <text value="Thêm"/>
                 </properties>
               </component>
@@ -212,10 +278,18 @@
                   <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
+                  <autoscrolls value="false"/>
                   <background color="-917441"/>
-                  <enabled value="false"/>
+                  <doubleBuffered value="true"/>
+                  <enabled value="true"/>
+                  <focusCycleRoot value="true"/>
+                  <focusPainted value="true"/>
+                  <focusTraversalPolicyProvider value="true"/>
+                  <focusable value="true"/>
                   <font size="12"/>
-                  <foreground color="-1"/>
+                  <foreground color="-65794"/>
+                  <hideActionText value="true"/>
+                  <horizontalTextPosition value="0"/>
                   <text value="Tất cả sách"/>
                 </properties>
               </component>
@@ -225,9 +299,16 @@
                 </constraints>
                 <properties>
                   <background color="-917441"/>
-                  <enabled value="false"/>
+                  <doubleBuffered value="true"/>
+                  <enabled value="true"/>
+                  <focusCycleRoot value="true"/>
+                  <focusPainted value="true"/>
+                  <focusTraversalPolicyProvider value="true"/>
+                  <focusable value="true"/>
                   <font size="12"/>
-                  <foreground color="-1"/>
+                  <foreground color="-65794"/>
+                  <hideActionText value="true"/>
+                  <horizontalTextPosition value="0"/>
                   <text value="Sắp sếp"/>
                 </properties>
               </component>
@@ -237,9 +318,16 @@
                 </constraints>
                 <properties>
                   <background color="-917441"/>
-                  <enabled value="false"/>
+                  <doubleBuffered value="true"/>
+                  <enabled value="true"/>
+                  <focusCycleRoot value="true"/>
+                  <focusPainted value="true"/>
+                  <focusTraversalPolicyProvider value="true"/>
+                  <focusable value="true"/>
                   <font size="12"/>
-                  <foreground color="-1"/>
+                  <foreground color="-65794"/>
+                  <hideActionText value="true"/>
+                  <horizontalTextPosition value="0"/>
                   <text value="Sửa"/>
                 </properties>
               </component>
@@ -249,14 +337,45 @@
                 </constraints>
                 <properties>
                   <background color="-917441"/>
-                  <enabled value="false"/>
+                  <doubleBuffered value="true"/>
+                  <enabled value="true"/>
+                  <focusCycleRoot value="true"/>
+                  <focusPainted value="true"/>
+                  <focusTraversalPolicyProvider value="true"/>
+                  <focusable value="true"/>
                   <font size="12"/>
-                  <foreground color="-1"/>
+                  <foreground color="-65794"/>
+                  <hideActionText value="true"/>
+                  <horizontalTextPosition value="0"/>
                   <text value="Xóa"/>
                 </properties>
               </component>
             </children>
           </grid>
+          <component id="7147d" class="javax.swing.JLabel" binding="alerBook">
+            <constraints>
+              <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <focusable value="false"/>
+              <foreground color="-917441"/>
+              <name value=""/>
+              <opaque value="true"/>
+              <requestFocusEnabled value="false"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="64e" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <focusable value="false"/>
+              <font size="12" style="1"/>
+              <foreground color="-917441"/>
+              <text value="Thông báo:"/>
+            </properties>
+          </component>
         </children>
       </grid>
     </children>
